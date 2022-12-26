@@ -1,10 +1,13 @@
 <script setup>
-import { counter } from "../stores/counter.js";
+import { useCounterStore } from "../stores/CounterStore";
+let counter = useCounterStore();
 </script>
 
 <template>
     <div>
         <h1>{{ counter.count }}</h1>
-        <button @click="counter.increment()">Press this to increment!</button>
+        <button @click="counter.increment()"
+        :disabled="! counter.remaining">
+        Increment! (Remaining: {{ counter.remaining }}) </button>
     </div>
 </template>
