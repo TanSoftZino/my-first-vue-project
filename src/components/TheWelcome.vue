@@ -6,14 +6,19 @@ import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
 import { RouterLink } from "vue-router";
+import { inject } from "vue";
+let { key, changeDoc} = inject('key');
+
+
 </script>
 
 <template>
+  <button @click="changeDoc">To change Name of Documentation</button>
   <WelcomeItem>
     <template #icon>
       <DocumentationIcon />
     </template>
-    <template #heading>Documentation</template>
+    <template #heading>{{ key }}</template>
 
     Vue’s
     <a href="https://vuejs.org/" target="_blank" rel="noopener"
