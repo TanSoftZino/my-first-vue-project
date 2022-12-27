@@ -4,7 +4,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 </script>
 
 <template>
-  <header>
+  <!--<header>
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
 
@@ -16,7 +16,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
         <RouterLink to="/review">Review</RouterLink>
       </nav>
     </div>
-  </header>
+  </header> -->
 
   <RouterView />
 </template>
